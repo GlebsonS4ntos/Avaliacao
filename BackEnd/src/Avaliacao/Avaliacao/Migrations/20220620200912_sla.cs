@@ -2,7 +2,7 @@
 
 namespace Avaliacao.Migrations
 {
-    public partial class EntidadeProduto : Migration
+    public partial class sla : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {

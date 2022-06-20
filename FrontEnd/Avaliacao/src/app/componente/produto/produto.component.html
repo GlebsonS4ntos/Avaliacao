@@ -1,11 +1,8 @@
+<br><br>
 <div class="container" *ngIf="visibilidadeTabela">
-  <div class="border border-light rounded p-5">
-    <div>
-      <button type="button" class="btn btn-outline-success" (click)="ExibirFormularioCadastro()">Adicionar</button>
-      <hr />
-    </div>
-  </div>
-  <table class="table table-hover" *ngIf="produtos">
+  <button type="button" class="btn btn-outline-success" (click)="ExibirFormularioCadastro()">Adicionar</button>
+  <hr />
+  <table class="table" *ngIf="produtos">
     <thead>
       <tr>
         <th scope="col">N.Produto</th>
@@ -26,8 +23,10 @@
         <td>{{ produto.descricao }}</td>
         <td>{{ produto.preco }}</td>
         <td style="display: flex">
-          <button type="button" class="btn btn-outline-danger" (click)="ExcluirProduto(produto.produtoId)"><i class="bi bi-trash"></i></button>
-          <button type="button" class="btn btn-outline-info"(click)="ExibirFormularioAtualizacao(produto.produtoId)"><i class="bi bi-pencil-square"></i></button>
+          <button type="button" class="btn btn-outline-danger me-2" (click)="ExcluirProduto(produto.produtoId)"><i
+              class="bi bi-trash"></i></button>
+          <button type="button" class="btn btn-outline-info" (click)="ExibirFormularioAtualizacao(produto.produtoId)"><i
+              class="bi bi-pencil-square"></i></button>
         </td>
       </tr>
     </tbody>
@@ -35,64 +34,29 @@
 </div>
 <div class="container" *ngIf="visibilidadeFormulario">
   <div class="row">
-    <div
-      class="col-6 border border-light rounded p-5 shadow"
-      *ngIf="formulario"
-    >
-      <h6>{{ tituloFormulario }}</h6>
+    <div class="col-6 border border-light rounded p-5 shadow" *ngIf="formulario">
+      <h3>{{ tituloFormulario }}</h3>
       <hr />
       <form [formGroup]="formulario" (ngSubmit)="EnviarFormulario()">
-        <div class="form-group">
-          <label>Id</label>
-          <input
-            type="number"
-            class="fomr-control form-control-sm"
-            formControlName="produtoId"
-          />
+        <div class="form-group mb-3">
+          <label class="formTexto">Nome:</label>
+          <input type="text" class="fomr-control form-control-sm" formControlName="nome" />
         </div>
-        <div class="form-group">
-          <label>Nome</label>
-          <input
-            type="text"
-            class="fomr-control form-control-sm"
-            formControlName="nome"
-          />
+        <div class="form-group mb-3">
+          <label class="formTexto">Imagem Url:</label>
+          <input type="text" class="fomr-control form-control-sm" formControlName="imgUrl" />
         </div>
-        <div class="form-group">
-          <label>Imagem</label>
-          <input
-            type="text"
-            class="fomr-control form-control-sm"
-            formControlName="imgUrl"
-          />
+        <div class="form-group mb-3">
+          <label class="formTexto">Preço:</label>
+          <input type="number" class="fomr-control form-control-sm" formControlName="preco" />
         </div>
-        <div class="form-group">
-          <label>Preço</label>
-          <input
-            type="number"
-            class="fomr-control form-control-sm"
-            formControlName="preco"
-          />
+        <div class="form-group mb-3">
+          <label class="formTexto">Descrição:</label>
+          <input type="text" class="fomr-control form-control-sm" formControlName="descricao" />
         </div>
-        <div class="form-group">
-          <label>Descrição</label>
-          <input
-            type="text"
-            class="fomr-control form-control-sm"
-            formControlName="descricao"
-          />
-        </div>
-        <div class="container">
-          <div class="row">
-            <div>
-              <button type="submit" class="btn btn-primary">Salvar</button>
-            </div>
-            <div class="pl-1">
-              <button type="button" class="btn btn-primary" (click)="voltar()">
-                Voltar
-              </button>
-            </div>
-          </div>
+        <div style="display: flex;">
+          <button type="submit" class="btn btn-primary me-2">Salvar</button>
+          <button type="button" class="btn btn-primary" (click)="voltar()">Voltar</button>
         </div>
       </form>
     </div>

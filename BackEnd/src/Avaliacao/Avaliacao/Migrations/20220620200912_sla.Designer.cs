@@ -9,8 +9,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Avaliacao.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20220620124012_Entidade Produto")]
-    partial class EntidadeProduto
+    [Migration("20220620200912_sla")]
+    partial class sla
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

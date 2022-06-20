@@ -44,8 +44,8 @@ namespace Avaliacao.Controller
 
         // PUT: api/Produtos/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
-        [HttpPut("{id}")]
-        public async Task<IActionResult> PutProduto(int id, Produto produto)
+        [HttpPut]
+        public async Task<IActionResult> PutProduto(Produto produto)
         {
             _context.Produtos.Update(produto);
             await _context.SaveChangesAsync();
