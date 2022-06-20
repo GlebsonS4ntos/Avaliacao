@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\glebs\\Desktop\\Avaliacao\\BackEnd\\src\\Avaliacao\\Avaliacao\\Avaliacao.csproj": {}
+    "C:\\Users\\vivia\\OneDrive\\Área de Trabalho\\Avaliacao2\\BackEnd\\src\\Avaliacao\\Avaliacao\\Avaliacao.csproj": {}
   },
   "projects": {
-    "C:\\Users\\glebs\\Desktop\\Avaliacao\\BackEnd\\src\\Avaliacao\\Avaliacao\\Avaliacao.csproj": {
+    "C:\\Users\\vivia\\OneDrive\\Área de Trabalho\\Avaliacao2\\BackEnd\\src\\Avaliacao\\Avaliacao\\Avaliacao.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\glebs\\Desktop\\Avaliacao\\BackEnd\\src\\Avaliacao\\Avaliacao\\Avaliacao.csproj",
+        "projectUniqueName": "C:\\Users\\vivia\\OneDrive\\Área de Trabalho\\Avaliacao2\\BackEnd\\src\\Avaliacao\\Avaliacao\\Avaliacao.csproj",
         "projectName": "Avaliacao",
-        "projectPath": "C:\\Users\\glebs\\Desktop\\Avaliacao\\BackEnd\\src\\Avaliacao\\Avaliacao\\Avaliacao.csproj",
-        "packagesPath": "C:\\Users\\glebs\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\glebs\\Desktop\\Avaliacao\\BackEnd\\src\\Avaliacao\\Avaliacao\\obj\\",
+        "projectPath": "C:\\Users\\vivia\\OneDrive\\Área de Trabalho\\Avaliacao2\\BackEnd\\src\\Avaliacao\\Avaliacao\\Avaliacao.csproj",
+        "packagesPath": "C:\\Users\\vivia\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\vivia\\OneDrive\\Área de Trabalho\\Avaliacao2\\BackEnd\\src\\Avaliacao\\Avaliacao\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\glebs\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\vivia\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
