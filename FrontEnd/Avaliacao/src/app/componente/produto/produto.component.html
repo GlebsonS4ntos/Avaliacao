@@ -1,0 +1,100 @@
+<div class="container" *ngIf="visibilidadeTabela">
+  <div class="border border-light rounded p-5">
+    <div>
+      <button type="button" class="btn btn-outline-success" (click)="ExibirFormularioCadastro()">Adicionar</button>
+      <hr />
+    </div>
+  </div>
+  <table class="table table-hover" *ngIf="produtos">
+    <thead>
+      <tr>
+        <th scope="col">N.Produto</th>
+        <th scope="col">Imagem</th>
+        <th scope="col">Nome</th>
+        <th scope="col">Descrição</th>
+        <th scope="col">Preço</th>
+        <th scope="col">Opções</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let produto of produtos; let i = index">
+        <th scope="row">{{ i + 1 }}</th>
+        <td>
+          <img [src]="produto.imgUrl" alt="" width="100px" height="100px" />
+        </td>
+        <td>{{ produto.nome }}</td>
+        <td>{{ produto.descricao }}</td>
+        <td>{{ produto.preco }}</td>
+        <td style="display: flex">
+          <button type="button" class="btn btn-outline-danger" (click)="ExcluirProduto(produto.produtoId)"><i class="bi bi-trash"></i></button>
+          <button type="button" class="btn btn-outline-info"(click)="ExibirFormularioAtualizacao(produto.produtoId)"><i class="bi bi-pencil-square"></i></button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<div class="container" *ngIf="visibilidadeFormulario">
+  <div class="row">
+    <div
+      class="col-6 border border-light rounded p-5 shadow"
+      *ngIf="formulario"
+    >
+      <h6>{{ tituloFormulario }}</h6>
+      <hr />
+      <form [formGroup]="formulario" (ngSubmit)="EnviarFormulario()">
+        <div class="form-group">
+          <label>Id</label>
+          <input
+            type="number"
+            class="fomr-control form-control-sm"
+            formControlName="produtoId"
+          />
+        </div>
+        <div class="form-group">
+          <label>Nome</label>
+          <input
+            type="text"
+            class="fomr-control form-control-sm"
+            formControlName="nome"
+          />
+        </div>
+        <div class="form-group">
+          <label>Imagem</label>
+          <input
+            type="text"
+            class="fomr-control form-control-sm"
+            formControlName="imgUrl"
+          />
+        </div>
+        <div class="form-group">
+          <label>Preço</label>
+          <input
+            type="number"
+            class="fomr-control form-control-sm"
+            formControlName="preco"
+          />
+        </div>
+        <div class="form-group">
+          <label>Descrição</label>
+          <input
+            type="text"
+            class="fomr-control form-control-sm"
+            formControlName="descricao"
+          />
+        </div>
+        <div class="container">
+          <div class="row">
+            <div>
+              <button type="submit" class="btn btn-primary">Salvar</button>
+            </div>
+            <div class="pl-1">
+              <button type="button" class="btn btn-primary" (click)="voltar()">
+                Voltar
+              </button>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
